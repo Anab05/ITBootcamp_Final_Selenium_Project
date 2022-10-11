@@ -18,7 +18,7 @@ import pages.MessagePopUpPage;
 import pages.NavPage;
 import pages.SignUpPage;
 
-public class Basic_test {
+public class Basic_Test {
 	protected WebDriver driver;
  	protected WebDriverWait wait;
  	protected SoftAssert softAssert;
@@ -32,7 +32,7 @@ public class Basic_test {
     
     @BeforeClass
     public void setup() {
-    	System.setProperty("webdriver.chrome.driver","drivers/chromedriver.exe");
+    	System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
 	    driver = new ChromeDriver();
 	    driver.manage().window().maximize();
 	    wait = new WebDriverWait(driver, Duration.ofSeconds(20));
@@ -49,7 +49,7 @@ public class Basic_test {
     
     @BeforeMethod
     public void beforeMethod() {
-    	
+    	driver.get(baseUrl);
     }
     @AfterMethod
     public void afterMethod() {
